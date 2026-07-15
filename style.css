@@ -663,110 +663,6 @@ body {
     font-size: 14px;
 }
 
-/* ===== DENTISTS ===== */
-.dentists {
-    padding: 80px 0;
-    background: var(--light);
-}
-
-.dentists-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.dentists-header h2 {
-    font-size: 38px;
-    font-weight: 700;
-    color: var(--dark);
-}
-
-.dentists-header h2 span {
-    color: var(--primary);
-}
-
-.dentists-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.dentist-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
-    padding-bottom: 25px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.dentist-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow);
-}
-
-.dentist-img {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-}
-
-.dentist-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.dentist-card:hover .dentist-img img {
-    transform: scale(1.05);
-}
-
-.dentist-card h3 {
-    font-size: 20px;
-    margin: 20px 0 5px;
-    color: var(--dark);
-}
-
-.dentist-card p {
-    color: var(--gray);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.stars {
-    color: #ffc107;
-    margin-bottom: 15px;
-}
-
-.dentist-social {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.dentist-social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(26, 115, 232, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.dentist-social a:hover {
-    background: var(--primary);
-    color: var(--white);
-}
-
 /* ===== TESTIMONIALS ===== */
 .testimonials {
     padding: 80px 0;
@@ -1342,8 +1238,7 @@ textarea {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .features-grid,
-    .dentists-grid {
+    .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1399,7 +1294,6 @@ textarea {
     }
     
     .features-grid,
-    .dentists-grid,
     .testimonials-grid,
     .blog-grid {
         grid-template-columns: 1fr;
@@ -1426,11 +1320,6 @@ textarea {
     .form-row {
         grid-template-columns: 1fr;
     }
-    
-    .dentists-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1441,7 +1330,6 @@ textarea {
     .section-header h2,
     .services-left h2,
     .teeth-care-left h2,
-    .dentists-header h2,
     .emergency-left h2,
     .appointment-left h2 {
         font-size: 28px;
