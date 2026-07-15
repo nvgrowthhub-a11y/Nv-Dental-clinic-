@@ -10,17 +10,14 @@ function scrollToSection(id) {
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
-    // Close mobile menu if open
     document.querySelector('.navbar').classList.remove('active');
 }
 
 // ===== TAB SWITCHING =====
 function switchTab(tabName) {
-    // Remove active from all tabs
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
     
-    // Add active to clicked tab
     event.target.classList.add('active');
     document.getElementById('tab-' + tabName).classList.add('active');
 }
@@ -38,7 +35,6 @@ function closeModal(modalId) {
     document.body.style.overflow = 'auto';
 }
 
-// Close modal on outside click
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.classList.remove('show');
@@ -113,7 +109,7 @@ window.addEventListener('scroll', animateProgress);
 window.addEventListener('load', animateProgress);
 
 // ===== SCROLL REVEAL ANIMATION =====
-const revealElements = document.querySelectorAll('.feature-card, .dentist-card, .testimonial-card, .blog-card');
+const revealElements = document.querySelectorAll('.feature-card, .testimonial-card, .blog-card');
 
 const revealOnScroll = () => {
     revealElements.forEach(el => {
@@ -125,7 +121,6 @@ const revealOnScroll = () => {
     });
 };
 
-// Set initial state
 revealElements.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
